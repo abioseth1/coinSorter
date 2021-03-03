@@ -2,10 +2,11 @@ print("Welcome to Group 5 Currency Program!")
 print("")
 print(" You can either Sort your pennies into desirable denominations \
 or perform exchange rate conversion of one currency to another  ")
+print("All sorting will be done in the currency of GBP - British Pound (£) as pennies (100 pennies = £1)")
 print("")
 
-choice = int(input(" Enter 1 for Coin Sorter, 2 for Currency Conversion or 3 for Multiple Coin Sorter: "))
-
+choice = int(input(" Enter 1 for Single Coin Sorter, 2 for Currency Conversion or 3 for Multiple Coin Sorter: "))
+# Simple denomination coin sorter
 if choice == 1:
     print("")
     print("")
@@ -45,7 +46,7 @@ if choice == 1:
         print("You have chosen the 100p denomination")
         onehundredp = int(input("Input how much money (in pennies) between 0 and 10000: "))
         if onehundredp <= 0:
-            print("Error, input value is not valid, try again!")
+            print("Error, input value is not valid")
 
         elif onehundredp >= 10000:
             print("Error, input value has exceeded range")   
@@ -63,10 +64,10 @@ if choice == 1:
         print("You have chosen the 50p denomination")
         fiftyp = int(input("Input how much money (in pennies) between 0 and 10000: "))
         if fiftyp <= 0:
-            print("Error, input value is not valid value, try again!")
+            print("Error, input value is not valid value")
 
         elif fiftyp >= 10000:
-            print("Error, input value exceeded range, try again!")   
+            print("Error, input value exceeded range")   
 
         else:
             fifty = fiftyp//50
@@ -81,10 +82,10 @@ if choice == 1:
         print("You have chosen the 20p denomination")
         twentyp = int(input("Input how much money (in pennies) between 0 and 10000: "))
         if twentyp <= 0:
-            print("Error, input value is not valid, try again!")
+            print("Error, input value is not valid")
 
         elif twentyp >= 10000:
-            print("Error, input value exceeded range, try again!")   
+            print("Error, input value exceeded range")   
 
         else:
             twenty = twentyp//20
@@ -99,10 +100,10 @@ if choice == 1:
         print("You have chosen the 10p denomination")
         tenp = int(input("Input how much money (in pennies) between 0 and 10000: "))
         if tenp <= 0:
-            print("Error, input value is not valid, try again!")
+            print("Error, input value is not valid")
 
         elif tenp >= 10000:
-            print("Error, input value exceeded range, try again!")   
+            print("Error, input value exceeded range")   
 
         else:
             ten = tenp//10
@@ -175,7 +176,7 @@ if choice == 2:
     print(f'{amount} {currencyFrom} : {float(rate) * amount} {currencyTo}')
 
 
-
+# multiple denominator coin sorter
 if choice == 3:
     print("")
     print("")
