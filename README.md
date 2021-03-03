@@ -20,3 +20,10 @@ Used alpha vantage api to create a realtime interactive currency converter
 Uploaded a python file of the foundations of part 2 of the brief
 - basic layout of the menu given
 - functions labelled in the code with space to add own coding
+
+# Q1p2
+
+02/03/21 - 
+Harry has uploaded an updated version of the Q1 answer
+- Added another option (a third option) as a multiple coin sorter
+- Allows the user to enter an input and that input will be sorted into various denominations
