@@ -1,13 +1,16 @@
-print("Welcome to the multiple denominator coin sorter!")
-print("You can input a coin value below and the program will sort the coins in terms of 10, 20, 50, 100 and 200p")
+print("Welcome to Group 5 multiple denomination coin sorter!")
+print("")
+print("You can input a coin value below and the program will sort the coins in terms of 10p, 20p, 50p, 100p and 200p")
+print("")
 print("The program can calculate a remainder of any coins that were not sorted (will be between 0 - 10p)")
-pennies = int(input("Input how much money (in pennies) between 0 and 10000: "))
+
+pennies = int(input("Input how much money (in pennies) you want to sort between 0 and 10000: "))
 
 if pennies <= 0:
-        print("Error, input value is not a valid value")
+        print("Error, input value is not a valid, try again!")
 
 elif pennies >= 10000:
-        print("Error, input value has exceeded range")       
+        print("Error, input value exceeded range, try again!")       
 
 else:
         two_hundred = pennies//200
