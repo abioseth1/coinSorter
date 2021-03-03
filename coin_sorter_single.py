@@ -1,18 +1,22 @@
-print("Welcome to the coin sorting program!")
-print("In this program, we will sort out a coin value into a chosen demoninator with a remainder!")
-print("The available denominators are 10, 20, 50, 100 and 200 (given in pennies e.g. 100 pennies = £1)")
+print("Welcome to Group 5 coin sorting program!")
+print("")
+print("In this program, we will sort your coins into a chosen demonination and possibly give a remainder!")
+print("")
+print("The available denominations are 10p, 20p, 50p, 100p and 200p (given that 100 pennies = £1)")
+print("")
 print("The input value for sorting in pennies is limited between 0 and 10,000p")
+print("")
 
-pennies = int(input("Which coin sorting denominatior would you like to choose from? (choose between 10, 20, 50, 100 or 200) "))
+pennies = int(input("Which coin sorting denomination would you like to choose from? (choose between 10, 20, 50, 100 or 200): "))
 
 if pennies == 200: 
-    print("You have chosen the 200p denominator")
+    print("You have chosen the 200p denomination")
     twohundredp = int(input("Input how much money (in pennies) between 0 and 10000: "))
     if twohundredp <= 0:
-        print("Error, input value is not a valid value")
+        print("Error, input value is not valid, try again!")
 
     elif twohundredp >= 10000:
-        print("Error, input value has exceeded range")   
+        print("Error, input value exceeded range, try again!")   
 
     else:
         two_hundred = twohundredp//200
@@ -23,10 +27,10 @@ if pennies == 200:
 
 
 elif pennies == 100:
-    print("You have chosen the 100p denominator")
+    print("You have chosen the 100p denomination")
     onehundredp = int(input("Input how much money (in pennies) between 0 and 10000: "))
     if onehundredp <= 0:
-        print("Error, input value is not a valid value")
+        print("Error, input value is not valid, try again!")
 
     elif onehundredp >= 10000:
         print("Error, input value has exceeded range")   
@@ -40,13 +44,13 @@ elif pennies == 100:
 
 
 elif pennies == 50:
-    print("You have chosen the 50p denominator")
+    print("You have chosen the 50p denomination")
     fiftyp = int(input("Input how much money (in pennies) between 0 and 10000: "))
     if fiftyp <= 0:
-        print("Error, input value is not a valid value")
+        print("Error, input value is not valid value, try again!")
 
     elif fiftyp >= 10000:
-        print("Error, input value has exceeded range")   
+        print("Error, input value exceeded range, try again!")   
 
     else:
         fifty = fiftyp//50
@@ -57,13 +61,13 @@ elif pennies == 50:
 
 
 elif pennies == 20:
-    print("You have chosen the 20p denominator")
+    print("You have chosen the 20p denomination")
     twentyp = int(input("Input how much money (in pennies) between 0 and 10000: "))
     if twentyp <= 0:
-        print("Error, input value is not a valid value")
+        print("Error, input value is not valid, try again!")
 
     elif twentyp >= 10000:
-        print("Error, input value has exceeded range")   
+        print("Error, input value exceeded range, try again!")   
 
     else:
         twenty = twentyp//20
@@ -74,13 +78,13 @@ elif pennies == 20:
        
 
 elif pennies == 10:
-    print("You have chosen the 10p denominator")
+    print("You have chosen the 10p denomination")
     tenp = int(input("Input how much money (in pennies) between 0 and 10000: "))
     if tenp <= 0:
-        print("Error, input value is not a valid value")
+        print("Error, input value is not valid, try again!")
 
     elif tenp >= 10000:
-        print("Error, input value has exceeded range")   
+        print("Error, input value exceeded range, try again!")   
 
     else:
         ten = tenp//10
@@ -88,6 +92,4 @@ elif pennies == 10:
         ten_remainder = (tenp - ten_2)
         print("The number of 10p coins: " , int(ten))
         print("Remainder: " , int(ten_remainder) , "p")
-
-
 
