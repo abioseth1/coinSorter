@@ -140,12 +140,12 @@ if choice == 2:
 
     #Retrieve user inputs
     #while currencyFrom.isalpha():
-    currencyFrom = input("Enter Currency to convert From: (e.g. GBP)").upper()
+    currencyFrom = input("Enter Currency to convert From (e.g. GBP): ").upper()
 
     #while currencyTo.isalpha():
-    currencyTo = input("Enter Currency to convert To: (e.g. EUR)").upper()
+    currencyTo = input("Enter Currency to convert To (e.g. EUR): ").upper()
 
-    amount = float(input("Enter amount to convert: (e.g. 50)"))
+    amount = float(input("Enter amount to convert (e.g. 50.00): "))
 
     #A JSON request to retrieve the required exchange rate
 
