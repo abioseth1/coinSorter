@@ -6,7 +6,7 @@ Given here are 2 python files that are separate coin sorting programs (coin_sort
  - single allows you to sort a coin value with a chosen denominator.
 
 
-# Currencyconverter
+# currencyConverter
 
 02/03/21 -
 Used alpha vantage api to create a realtime interactive currency converter
