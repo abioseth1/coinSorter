@@ -13,3 +13,10 @@ Used alpha vantage api to create a realtime interactive currency converter
 - it allow use to input desired currency pair
 - user input the amount to convert
 - And it ouput the exchange rate at that instant and the equivalent gross 
+
+# Q2p1
+
+02/03/21 - 
+Uploaded a python file of the foundations of part 2 of the brief
+- basic layout of the menu given
+- functions labelled in the code with space to add own coding
