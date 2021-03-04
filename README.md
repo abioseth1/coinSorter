@@ -27,3 +27,8 @@ Uploaded a python file of the foundations of part 2 of the brief
 Harry has uploaded an updated version of the Q1 answer
 - Added another option (a third option) as a multiple coin sorter
 - Allows the user to enter an input and that input will be sorted into various denominations
+
+# Qt_Designer_Menu.ui and .py
+04/03/2021
+Uploaded two files for the menu GUI. .ui file can be editted with QT Designer 
+
