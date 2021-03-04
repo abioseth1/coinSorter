@@ -476,7 +476,8 @@ def option_5():
 
 def option_6():
     print("")
-    print("***Quitting the program***")
+    print(" Quiting the program ...")
+    print("")
     print("*********** Bye **********")
     sys.exit()
 
