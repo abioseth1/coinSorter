@@ -32,3 +32,8 @@ Harry has uploaded an updated version of the Q1 answer
 04/03/2021
 Uploaded two files for the menu GUI. .ui file can be editted with QT Designer 
 
+
+# part2.v2
+03-03-21
+- codes involving single coin and multiple coin sorter were incorporated into the Q2.v1 template provided by Harry 
+- yet to setup the option 5 involving configurations 
