@@ -43,3 +43,8 @@ Uploaded two files for the menu GUI. .ui file can be editted with QT Designer
 04-03-21
 - updated template version of harry's work
 - gives option 1 completed and currently working on other options
+
+# Q2_final_version
+04-03-21
+- completed version of Q2
+- May need tidying up with the presentation but this is final product, any edit to Q2 should be made to this file
