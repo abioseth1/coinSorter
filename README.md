@@ -37,3 +37,8 @@ Uploaded two files for the menu GUI. .ui file can be editted with QT Designer
 03-03-21
 - codes involving single coin and multiple coin sorter were incorporated into the Q2.v1 template provided by Harry 
 - yet to setup the option 5 involving configurations 
+
+# Q2v1_harryVersion
+04-03-21
+- updated template version of harry's work
+- gives option 1 completed and currently working on other options
