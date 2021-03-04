@@ -22,7 +22,7 @@ def option_1():
         print("")
         print("You have chosen the 200 denominator")
         print("")
-        twohundredp = int(input("Input how much money to be sorted between 0 and 10000: "))
+        twohundredp = int(input("Input how much money to be sorted: "))
         if twohundredp < min_input:
             print("Error, input value is not a valid value")
             option_1()
@@ -44,7 +44,7 @@ def option_1():
         print("")
         print("You have chosen the 100 denominator")
         print("")
-        onehundredp = int(input("Input how much money to be sorted between 0 and 10000: "))
+        onehundredp = int(input("Input how much money to be sorted: "))
         if onehundredp < min_input:
             print("Error, input value is not a valid value")
             option_1()
@@ -66,7 +66,7 @@ def option_1():
         print("")
         print("You have chosen the 50 denominator")
         print("")
-        fiftyp = int(input("Input how much money to be sorted between 0 and 10000: "))
+        fiftyp = int(input("Input how much money to be sorted: "))
         if fiftyp < min_input:
             print("Error, input value is not a valid value")
             option_1()
@@ -88,7 +88,7 @@ def option_1():
         print("")
         print("You have chosen the 20 denominator")
         print("")
-        twentyp = int(input("Input how much money to be sorted between 0 and 10000: "))
+        twentyp = int(input("Input how much money to be sorted: "))
         if twentyp < min_input:
             print("Error, input value is not a valid value")
             option_1()
@@ -110,7 +110,7 @@ def option_1():
         print("")
         print("You have chosen the 10 denominator")
         print("")
-        tenp = int(input("Input how much money to be sorted between 0 and 10000: "))
+        tenp = int(input("Input how much money to be sorted: "))
         if tenp < min_input:
             print("Error, input value is not a valid value")
             option_1()
