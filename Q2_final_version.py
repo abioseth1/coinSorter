@@ -1,8 +1,14 @@
+# Welcome to Group 5 code for your coin sorting program
+# Below, we have inported a library and defined the default currency, min + max inputs unless they have been edited while running
 import sys
 currency_1 = "p"
 min_input = 0
 max_input = 10000
 
+# We have defined each option from the main menu as a diferent function to keep the code organised
+# The code breaks down all of the options (1-6), before defining the main menu at the bottom of the code
+
+# Here, we introduce the coin sorting program and ask for a coin denomination and an input coin value to be sorted
 def option_1():
     print("")
     print("")
@@ -17,7 +23,7 @@ def option_1():
     print("Alternatively, you can type 0 to return to the main menu" )
     print("")
     pennies = int(input( "Which coin sorting denominatior would you like to choose from? (choose between 0, 10, 20, 50, 100 or 200) : " ))
-        
+    # pennies is a variable that the user will decide as the chosen coin denominator, below are the different coding for the different options given as if, elif statements. The input must be an integer. I used this in my favour to define a integer to go back to the main menu (0)   
     if pennies == 200: 
         print("")
         print("You have chosen the 200 denominator")
@@ -38,8 +44,8 @@ def option_1():
             print("The number of 200" ,currency_1,  "coins: "  , int(two_hundred))
             print("Remainder: " , int(two_hundred_remainder) , currency_1)
         option_1()
-
-
+    # each code block has the same layout, it says if the user inputs that given coin denomination (200,100,50,20,10), then they are asked to define a coin value. This value must fall within the range defined by the user. 
+    # The program takes the input coin value, divides it by the denominator and gives the remainder as a chosen currency. After the calculation, the user is taken to the start of the sub-menu where they can quit or do another calculation
     elif pennies == 100:
         print("")
         print("You have chosen the 100 denominator")
@@ -143,8 +149,9 @@ def option_1():
 
 
 
-
-
+# option 2 leads the user to the multiple coin denomination, where an input value given (between a defined input range) is sorted into all the available denominators (10,20,50,100,200)
+# the output is printed below. There is alos an option to input 0 (similar to option 1) to return to the main menu
+# the modulus function % was used to denonate the denominatons, with the remainder calculated too.
 def option_2():
     print("")
     print("")
@@ -159,7 +166,7 @@ def option_2():
     print("Alternatively, you can type 0 to return to the main menu" )
     print("")
     pennies = int(input("Input how much money to be sorted, or input 0 to return to the main menu: "))
-
+    # ranges defined - must be between min and max output
     if pennies < min_input:
         print("")
         print("Error, input value is not a valid value")
@@ -183,7 +190,7 @@ def option_2():
         print("")   
         print("")   
         start_of_program()  
-
+    # every number input between the defined range will be sorted into the denominators
     else:
         two_hundred = pennies//200
         two_hundred2 = two_hundred * 200
@@ -217,7 +224,7 @@ def option_2():
 
 
 
-
+# This option defines for the user the denominations that are available. The list is printed and then the user returns to the main menu.
 def option_3():
     print("")
     print("")
@@ -234,9 +241,9 @@ def option_3():
 
 
 
-
-
-
+# This option allows the user to enter a sub-menu to set the program configuration
+# the variables that hold the inputted configurations are global, which mean they are saved to the program and override any other value of the variable previously stated.
+# The menu printed below gives options to change given parameters or return to the main menu
 def option_4():
     global currency_1
     global min_input
@@ -248,9 +255,9 @@ def option_4():
     print("2 - Set minimum coin input value")
     print("3 - Set maximum coin input value")
     print("4 - Return to main menu")
-    choice2 = int(input("Please choose an option here: "))
+    choice2 = int(input("Please choose an option here by selecting one of the numbers (1-4): "))
     print("")
-    
+    # A given input here will define the UNIT of currency that the user wishes to use. The currencies are number corresponding. After an input is given, the variable is stored and the user is returned to the sub menu.
     if choice2 == 1:
         print("")
         print("Choose between GDP (£), USD ($) and MGA (Malagasy Ariary Ar)")
@@ -261,7 +268,7 @@ def option_4():
             print("You have selected GDP as your chosen currency")
             currency_1 = "p"
             
-
+        
             option_4()
         elif currency == 2:
             print("You have selected USD as your chosen currency")
@@ -277,7 +284,7 @@ def option_4():
             print("You have inputted an invalid currency")
             option_4()
 
-    
+    # The two options below represent a chance for the user to input a given range for all coin denomination calculations. After an input is given, the variables are stored and the user is returned to the sub menu.
     elif choice2 == 2:
         print("")
         min_input = int(input("Input the minimum coin value: "))
@@ -300,14 +307,15 @@ def option_4():
         print("")
         start_of_program()
 
-# choices are p and £ , cent and $, malagasey airey
+# choices for currency are p and £ , cent and $, malagasey airey
+# the given range can be defined as any value.
 
 
 
 
 
-
-
+# This option when called upon will print the current configurations of the program including the currency and boundary inputs. After doing this, the user is redirected to the main menu
+# Since these variables are functions, they will print the current configuration that was defined in option 5. If nothing is defined, the default currency and limits are ued, defined at the start of the program.
 def option_5():
     print("")
     print("")
@@ -329,7 +337,7 @@ def option_5():
 
 
 
-
+# option 6 uses a function imported from the sys libary to quit the program and stop the program after a message is displayed
 def option_6():
     print("")
     print("")
@@ -343,8 +351,9 @@ def option_6():
 
 
 
-
-
+# Below gives the structure to the main menu, this is the first thing to be printed as start_of_program() is given at the bottom of the code.
+# When a defined number as explained in the print below is chosen, the user will be redirected to that option
+# This is done by if/elif statements that lead to the other functions being called upon. If an invalid number is given, the user is redirected to the main menu.
 def start_of_program():
     print("***Coin Sorter - Main Menu***")
     print("1 - Coin calculator")
@@ -353,7 +362,7 @@ def start_of_program():
     print("4 - Set details")
     print("5 - Display program configurations")
     print("6 - Quit the program")
-    choice = int(input("Please choose an option here: "))
+    choice = int(input("Please choose an option here by selecting one of the numbers (1-6): "))
 
     if choice == 1:
         option_1()
@@ -372,8 +381,18 @@ def start_of_program():
 
     elif choice == 6:
         option_6()
+    else:
+        
+        print("")
+        print("Invalid option")
+        print("")
+        print("Returning to the main menu...")
+        print("")
+        print("")
+        start_of_program()
+
 
         
-
+# Here, we define that the first thing that is called is the start_of_program() function. 
+# Since this piece of coding is not in a function, this line is the first point of action for the system.
 start_of_program()
-
