@@ -55,5 +55,5 @@ Uploaded two files for the menu GUI. .ui file can be editted with QT Designer
 - I tried different way of designing GUI by creating a separate window for each option.
 - I uploaded Menu_page, Page1,2,3 and 5.
 - You need to run Menu_Page to launch the code.
-- For option 6 in the menu if you click quit.
+- For option 6 in the menu if you click quit it will close page but not the window.
 - Option 4 not done yet (page was not created).
