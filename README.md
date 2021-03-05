@@ -48,3 +48,12 @@ Uploaded two files for the menu GUI. .ui file can be editted with QT Designer
 04-03-21
 - completed version of Q2
 - May need tidying up with the presentation but this is final product, any edit to Q2 should be made to this file
+
+
+# GUI v2
+05/03/21
+- I tried different way of designing GUI by creating a separate window for each option.
+- I uploaded Menu_page, Page1,2,3 and 5.
+- You need to run Menu_Page to launch the code.
+- For option 6 in the menu if you click quit.
+- Option 4 not done yet (page was not created).
