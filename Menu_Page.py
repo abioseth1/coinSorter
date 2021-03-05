@@ -1,3 +1,6 @@
+# To install PyQt5 copy this command to your CMD 
+# pip install pyqt5 and pip install pyqt5-tools
+
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'Menu_Page.ui'
