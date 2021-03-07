@@ -420,9 +420,9 @@ def option_4():
     elif choice2 == 2:
         print("set minimum coin value here")
         print("")
-        min_coin = int(input("Enter the minimum coin you want (e.g 10 as 10p): "))
+        min_coin = int(input("Enter the minimum coin value (e.g zero as 0): "))
         print("")
-        print("You've selected {} as your minimum coin".format(min_coin))
+        print("You've selected {} as your minimum coin value".format(min_coin))
         
         #user decides how to terminate
         end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
@@ -439,9 +439,9 @@ def option_4():
     elif choice2 == 3:
         print("set maximum coin value here")
         print("")
-        max_coin = int(input("Enter the maximum coin you want (e.g 200 as £2): "))
+        max_coin = int(input("Enter the maximum coin value you want (e.g 10000): "))
         print("")
-        print("You've selected {} as your maximum coin".format(max_coin))
+        print("You've selected {} as your maximum coin value".format(max_coin))
         
         #user decides how to terminate
         end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
