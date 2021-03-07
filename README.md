@@ -57,3 +57,9 @@ Uploaded two files for the menu GUI. .ui file can be editted with QT Designer
 - You need to run Menu_Page to launch the code.
 - For option 6 in the menu if you click quit it will close page but not the window.
 - Option 4 not done yet (page was not created).
+
+# PyQt5 update
+07/03/21
+- Combined all python files of PyQt5 in a single file (containerpage.py)
+- Added sorting function for option 2 (multiple coin sorter)
+- updated design of multiple coin sorter and remainder option added 
