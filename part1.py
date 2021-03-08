@@ -1,32 +1,60 @@
-print("Welcome to Group 5 Currency Program!")
-print("")
-print(" You can either Sort your pennies into desirable denominations \
-or perform exchange rate conversion of one currency to another  ")
-print("")
+# Welcome to Group 5 Interactive menu for your coin sorting
 
-choice = int(input(" Enter 1 for Coin Sorter or 2 for Currency Conversion"))
+#first we will import the sys module 
+import sys
 
-if choice == 1:
-    
-    print("Welcome to Group 5 coin sorting program!")
+# then we delve into our script, considering the different options(1-5) analogous to the menu(1-5)
+
+def option_1():
+    print("***Coin calculator***")
+    # insert single coin calculator here
+
+    print("Welcome to Group 5 single denomination coin sorting program!")
     print("")
-    print("In this program, we will sort your coins into a chosen demonination and possibly give a remainder!")
+    print("Let's sort your coins for you")
     print("")
-    print("The available denominations are 10p, 20p, 50p, 100p and 200p (given that 100 pennies = £1)")
+    print("Pick a coin within; 10, 20, 50, 100 and 200p (given that 100 pennies = £1)")
     print("")
-    print("The input value for sorting in pennies is limited between 0 and 10,000p")
+    print("We can only sort pennies with  the range of 0 and 10,000")
     print("")
 
-    pennies = int(input("Which coin sorting denomination would you like to choose from? (choose between 10, 20, 50, 100 or 200): "))
+    # initialise the coin range available and the termination options
+    coins = [10, 20, 50, 100, 200]  #list of coins to select from
+    ends = ["yes", "no"]
+    # request for user's choice of coin denomination
+    pennies = int(input("Enter the coin denomination you want(between 10, 20, 50, 100 or 200): "))
 
-    if pennies == 200: 
+# -----------------for the £2 ------------------------------------------------
+    if pennies == 200 and pennies in coins: 
         print("You have chosen the 200p denomination")
-        twohundredp = int(input("Input how much money (in pennies) between 0 and 10000: "))
-        if twohundredp <= 0:
+        #request for user's money to be sorted
+        twohundredp = int(input("How much money (in pennies) do you want to sort? "))
+        
+        if twohundredp < 0:
             print("Error, input value is not valid, try again!")
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()         
 
-        elif twohundredp >= 10000:
-            print("Error, input value exceeded range, try again!")   
+        elif twohundredp > 10000:
+            print("Error, input value exceeded range, try again!")
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
         else:
             two_hundred = twohundredp//200
@@ -34,16 +62,52 @@ if choice == 1:
             two_hundred_remainder = (twohundredp - two_hundred_2)
             print("The number of £2 coins: " , int(two_hundred))
             print("Remainder: " , int(two_hundred_remainder) , "p")
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
+            
+    # calculates the no. of pennies by dividing input by denominator, \ 
+    # remainder calculated by subracting two_hundred_2 from input
+    # code repeated for other given denominators
 
+#-----------------for the £1   ----------------------------------------------
 
-    elif pennies == 100:
+    elif pennies == 100 and pennies in coins:
         print("You have chosen the 100p denomination")
         onehundredp = int(input("Input how much money (in pennies) between 0 and 10000: "))
-        if onehundredp <= 0:
+        
+        if onehundredp < 0:
             print("Error, input value is not valid, try again!")
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
-        elif onehundredp >= 10000:
-            print("Error, input value has exceeded range")   
+        elif onehundredp > 10000:
+            print("Error, input value has exceeded range")  
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
         else:
             one_hundred = onehundredp//100
@@ -51,16 +115,49 @@ if choice == 1:
             one_hundred_remainder = (onehundredp - one_hundred_2)
             print("The number of £1 coins: " , int(one_hundred))
             print("Remainder: " , int(one_hundred_remainder) , "p")
+            
+            #user decides how to terminate
+            ends = ["yes", "no"]
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
-
-    elif pennies == 50:
+# ----------------------for 50p ----------------------------------------------
+    elif pennies == 50 and pennies in coins:
         print("You have chosen the 50p denomination")
         fiftyp = int(input("Input how much money (in pennies) between 0 and 10000: "))
-        if fiftyp <= 0:
+        
+        if fiftyp < 0:
             print("Error, input value is not valid value, try again!")
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
-        elif fiftyp >= 10000:
+        elif fiftyp > 10000:
             print("Error, input value exceeded range, try again!")   
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
         else:
             fifty = fiftyp//50
@@ -68,16 +165,48 @@ if choice == 1:
             fifty_remainder = (fiftyp - fifty_2)
             print("The number of 50p coins: " , int(fifty))
             print("Remainder: " , int(fifty_remainder) , "p")
+            #user decides how to terminate
+            ends = ["yes", "no"]
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
-
-    elif pennies == 20:
+# ----------------- for 20p --------------------------------------------------
+    elif pennies == 20 and pennies in coins:
         print("You have chosen the 20p denomination")
         twentyp = int(input("Input how much money (in pennies) between 0 and 10000: "))
-        if twentyp <= 0:
+        
+        if twentyp < 0:
             print("Error, input value is not valid, try again!")
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
-        elif twentyp >= 10000:
+        elif twentyp > 10000:
             print("Error, input value exceeded range, try again!")   
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
         else:
             twenty = twentyp//20
@@ -85,16 +214,49 @@ if choice == 1:
             twenty_remainder = (twentyp - twenty_2)
             print("The number of 20p coins: " , int(twenty))
             print("Remainder: " , int(twenty_remainder) , "p")
+            start_of_program()
+             #user decides how to terminate
+            ends = ["yes", "no"]
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
-
-    elif pennies == 10:
+# ------------------ for 10p ------------------------------------------------
+    elif pennies == 10 and pennies in coins:
         print("You have chosen the 10p denomination")
         tenp = int(input("Input how much money (in pennies) between 0 and 10000: "))
+        
         if tenp <= 0:
             print("Error, input value is not valid, try again!")
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
-        elif tenp >= 10000:
-            print("Error, input value exceeded range, try again!")   
+        elif tenp > 10000:
+            print("Error, input value exceeded range, try again!")  
+             #user decides how to terminate
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
 
         else:
             ten = tenp//10
@@ -102,65 +264,273 @@ if choice == 1:
             ten_remainder = (tenp - ten_2)
             print("The number of 10p coins: " , int(ten))
             print("Remainder: " , int(ten_remainder) , "p")
+             #user decides how to terminate
+            ends = ["yes", "no"]
+            end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+            if end_call == "yes":
+                start_of_program()
+            elif end_call not in ends:
+                print("Sorry wrong response, bye")
+                sys.exit()
+            else:
+                print("*** Bye ***")
+                sys.exit()
+                
+# -------------------- if a wrong coin is entered -------------------------  
+    else:
+        print("Sorry, selected coin is not available")
+        #user decides how to terminate
+        ends = ["yes", "no"]
+        end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+        if end_call == "yes":
+            start_of_program()
+        elif end_call not in ends:
+            print("Sorry wrong response, bye")
+            sys.exit()
+        else:
+            print("*** Bye ***")
+            sys.exit()
 
 
+# ---- this is for menu 2 - multiple coins calculator ----------------------------- 
+#  Here you can obtain multiple coin denominations for your pennies
 
-
-if choice == 2:
-
-    #Currency Converter 
-
-    import json, urllib.request
-
-
-    #See full lists of valid currencies on https://www.alphavantage.co/documentation
-
-    #Display banner
-    print("$£¥€$£¥€$£¥€$£¥€$£¥€$£¥€$£¥€$£¥€$£¥€")
-    print("$£¥€                            $£¥€")
-    print("$£¥€ Group 5 Currency Converter $£¥€")
-    print("$£¥€                            $£¥€")
-    print("$£¥€$£¥€$£¥€$£¥€$£¥€$£¥€$£¥€$£¥€$£¥€")
+def option_2():
+    print("***Multiple coin calculator***")
+    # initialise coin list
+    coins = [10, 20, 50, 100, 200]
+    ends = ["yes", "no"]
     print("")
-    print("Examples of currencies,(you also input any other minor currency of your choice): ")
-    print("  GBP - British Pound £")
-    print("  MGA - Malagasy Ariary Ar")
-    print("  USD - US Dollar $")
-    print("  EUR - Euro €")
-    print("  JPY - Japanese Yen ¥")
     print("")
+    print("Welcome to the multiple denominations coin sorter!")
+    print("")
+    print("You can input your pennies and sort it to get 10, 20, 50, £1 and £2")
+    print("")
+    print("And a posible remainder (between 0 - 10p)")
+    # clarify what the denomination value is
+    print("")
+    pennies = int(input("Input the amount of pennies to sort, between 0 and 10000: "))
+    # give CONFIGURATION to user, stating that we are working in pennies and a valid range is given for the user to input into
 
-    # Using Alpha Vantage API
-    api_key = "92REN3HWQYJGNQFD"
+    if pennies < 0:
+        print("Error, input value is not valid, try again")
+         #user decides how to terminate
+        end_call = input("Enter 'yes' to Retry or 'no' to go back to Main Menu: ")
+        if end_call == "yes":
+            option_2()
+        elif end_call not in ends:
+            print("Sorry wrong response, bye")
+            sys.exit()
+        else:
+            start_of_program()
 
-    #Initialise key variables
-    currencyFrom = ""
-    currencyTo = ""
-    amount = 0
+    elif pennies > 10000:
+        print("Error, input value has exceeded range")       
+    # give errors when the input is outside of the valid range 
+    #user decides how to terminate
+        end_call = input("Enter 'yes' to Retry or 'no' to go back to Main Menu: ")
+        if end_call == "yes":
+            option_2()
+        elif end_call not in ends:
+            print("Sorry wrong response, bye")
+            sys.exit()
+        else:
+            start_of_program()
+            
+            
+    else:
+        two_hundred = pennies//200
+        two_hundred2 = two_hundred * 200
+        one_hundred = (pennies % 200) // 100
+        one_hundred2 = one_hundred * 100
+        fifty = (pennies % 200 % 100) // 50
+        fifty2 = fifty * 50
+        twenty = (pennies % 200 % 100 % 50) // 20
+        twenty2 = twenty * 20
+        ten = (pennies % 200 % 100 % 50 % 20) // 10
+        ten2 = ten * 10
+        remainder =  (pennies - two_hundred2 - one_hundred2 - fifty2 - twenty2 - ten2)
+     # calculations to show hwo the coin sorting process is completed
+        #five = (pennies % 200 % 100 % 50 % 20 % 10 ) // 5
+        #two = (pennies % 200 % 100 % 50 % 20 % 10 % 5 ) // 2
+        #one = (pennies % 200 % 100 % 50 % 20 % 10 % 5 % 2 ) // 1
+        print("The number of £2 coins: " , int(two_hundred)) 
+        print("The number of £1 coins: " , int(one_hundred))
+        print("The number of 50p coins: " , int(fifty))
+        print("The number of 20p coins: " , int(twenty))
+        print("The number of 10p coins: " , int(ten))
+        print("The remainder: " , int(remainder) , "p")
+            #user decides how to terminate
+        end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+        if end_call == "yes":
+            start_of_program()
+        elif end_call not in ends:
+            print("Sorry wrong response, bye")
+            sys.exit()
+        else:
+            print("*** Bye ***")
+            sys.exit()
+            
 
-    #Retrieve user inputs
-    #while currencyFrom.isalpha():
-    currencyFrom = input("Enter Currency to convert From (e.g. GBP): ").upper()
 
-    #while currencyTo.isalpha():
-    currencyTo = input("Enter Currency to convert To (e.g. EUR): ").upper()
+# ----------- this is for menu 3 (print coin list) ------------------------
+def option_3():
+    print("***Print Coin List***")
+    print("The available denominations are 10p,20p, 50p, 100p and 200p (given that 100 pennies = £1)")
+    #initialise termination
+    ends = ["yes", "no"]
+    #user decides how to terminate
+    end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+    if end_call == "yes":
+        start_of_program()
+    elif end_call not in ends:
+        print("Sorry wrong response, bye")
+        sys.exit()
+    else:
+        print("*** Bye ***")
+        sys.exit()
 
-    amount = float(input("Enter amount to convert (e.g. 50.00): "))
 
-    #A JSON request to retrieve the required exchange rate
 
-    base_url = 'https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE'
-    main_url = base_url + '&from_currency=' + currencyFrom + '&to_currency=' + currencyTo + '&apikey=' + api_key
+# -------------- this is for menu 4, which set details (submenu)--------------------
+def option_4():
+    print("***Set Details Sub-Menu***")
+    print("1 - Set currency")
+    print("2 - Set minimum coin input value")
+    print("3 - Set maximum coin input value")
+    print("4 - Return to main menu")
+    # initalise termination
+    ends = ["yes", "no"]
 
-    response = urllib.request.urlopen(main_url)
-    result = json.loads(response.read())
+    # user seechoices for the submenu
+    choice2 = int(input("Please choose an option here: "))
 
-    #Let's extract the required information
-    exchangeRate = result['Realtime Currency Exchange Rate']
-    rate = exchangeRate['5. Exchange Rate']
+    if choice2 == 1:
+        # this option allows user to pick desired currency 
+        print("Set currency here")
+        currency_option = str(input("Please insert a currency (e.g GBP, USD,...): ")).upper()
+        print("")
+        print("You've selected {} as a currency to work with".format(currency_option))
+        
+        #user decides how to terminate
+        end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+        if end_call == "yes":
+            option_4()
+        elif end_call not in ends:
+            print("Sorry wrong response, bye")
+            sys.exit()
+        else:
+            print("*** Bye ***")
+            sys.exit()
+            
 
-    #Output exchange rate and converted amount
-    print('Realtime exchange rate')
-    print(f'1 {currencyFrom} : {rate} {currencyTo}')
-    print('Converted amount')
-    print(f'{amount} {currencyFrom} : {float(rate) * amount} {currencyTo}')
+    elif choice2 == 2:
+        #this section enables the user to define the minimum value
+        print("set minimum coin value here")
+        print("")
+        min_coin = int(input("Enter the minimum coin value (not below 0): "))
+        print("")
+        print("You've selected {} as your minimum value".format(min_coin))
+        
+        #user decides how to terminate
+        end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+        if end_call == "yes":
+            option_4()
+
+        elif end_call not in ends:
+            print("Sorry wrong response, bye")
+            sys.exit()
+            
+        else:
+            print("*** Bye ***")
+            sys.exit()
+            
+
+    elif choice2 == 3:
+        # this section allow the user to select the maximum value
+        print("set maximum coin value here")
+        print("")
+        max_coin = int(input("Enter the maximum coin value (not exceeding 10000): "))
+        print("")
+        print("You've selected {} as your maximum value.format(max_coin))
+        
+        #user decides how to terminate
+        end_call = input("Enter 'yes' to perform another operation or 'no' to Exit: ")
+        if end_call == "yes":
+            option_4()
+        elif end_call not in ends:
+            print("Sorry wrong response, bye")
+            sys.exit()
+        else:
+            print("*** Bye ***")
+            sys.exit()
+            
+
+    elif choice2 == 4:
+      #this choice return the user to the main menu
+      start_of_program()
+
+
+#----- Defining program configuration ----------------------------------------
+
+
+def option_5():
+    print("***Display program configurations***")
+    # display config and return to menu
+    
+    start_of_program()
+
+
+
+
+
+
+def option_6():
+    print("")
+    print(" Quiting the program ...")
+    print("")
+    print("*********** Bye **********")
+    sys.exit()
+
+
+
+
+
+
+def start_of_program():
+    print("***Coin Sorter - Main Menu***")
+    print("1 - Coin calculator")
+    print("2 - Multiple coin calculator")
+    print("3 - Print coin list")
+    print("4 - Set details")
+    print("5 - Display program configurations")
+    print("6 - Quit the program")
+    choice = int(input("Please choose an operation: "))
+
+    if choice == 1:
+        option_1()
+
+    elif choice == 2:
+        option_2()
+
+    elif choice == 3:
+        option_3()
+        
+    elif choice == 4:
+        option_4()
+
+    elif choice == 5:
+        option_5()
+
+    elif choice == 6:
+        option_6()
+        
+    else:
+        print("Wrong input, try again!")
+        print("")
+        start_of_program()
+        print("")
+
+        
+
+start_of_program()
